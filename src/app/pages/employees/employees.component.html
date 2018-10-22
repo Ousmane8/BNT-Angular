@@ -1,3 +1,48 @@
-<p>
-  employees works!
-</p>
+<h1>Liste des salariés</h1>
+
+<div class="counter" *ngIf="employees">
+    <p>{{employees.length}} clients</p>
+</div>
+
+<div class="mt-5 mb-5">
+    <a routerLink='/create' class="btn btn-info">ajouter un salarié</a>
+</div>
+
+<table class="table">
+
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>firstname</td>
+        <td>username</td>
+        <td>birthday</td>
+        <td>address</td>
+        <td>city</td>
+        <td>zipcode</td>
+        <td>phone</td>
+        <td>email</td>
+        <td>post</td>
+    </tr>
+    
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee._id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.firstname}}</td>
+            <td>{{employee.username}}</td>
+            <td>{{employee.birthday}}</td>
+            <td>{{employee.address}}</td>
+            <td>{{employee.city}}</td>
+            <td>{{employee.zipcode}}</td>
+            <td>{{employee.phone}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.post}}</td>
+            <td>
+                <a routerLink="/user/{{user._id}}" class="btn btn-primary">voir profil </a>
+                <a routerLink="/update/{{user._id}}" class="btn btn-secondary">modifier profil</a>
+                <button type="button" name="button" class="btn btn-danger" (click)="deleteEmployee(user._id)">Supprimer</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
