@@ -73,7 +73,7 @@ updatedCustomer(nameent,address,city,zipcode,name,
     "city":city,
     "zipcode":zipcode,
     "name":name,
-    "firsttname":firstname,
+    "firstname":firstname,
     "phone":phone,
     "email":email,
     "activity":activity
