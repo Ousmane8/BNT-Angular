@@ -3,7 +3,9 @@ import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Http, Headers, Response, RequestOptions, RequestMethod } from '@angular/http';
 import { Router } from '@angular/router';
 
-@Injectable()
+@Injectable({
+  providedIn : 'root'
+})
 
 export class CustomersService {
 // ApiUrl="http://localhost:4200/assets/data/data.json";
