@@ -20,11 +20,13 @@ import { HomeComponent } from './pages/home/home.component';
 import { UpdateComponent } from './pages/update/update.component';
 import { CreatecustomerComponent } from './pages/createcustomer/createcustomer.component';
 import { UpdatecustomerComponent } from './pages/updatecustomer/updatecustomer.component';
+import { CreateprojectComponent } from './pages/createproject/createproject.component';
+import { UpdateprojectComponent } from './pages/updateproject/updateproject.component';
 
 // services
 import {EmployeesService} from './services/employees.service';
 import {CustomersService} from './services/customers.service';
-
+import {ProjectsService} from './services/projects.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import {CustomersService} from './services/customers.service';
     CreatecustomerComponent,
     UpdatecustomerComponent,
     UpdatecustomerComponent,
-    CreatecustomerComponent
+    CreatecustomerComponent,
+    CreateprojectComponent,
+    UpdateprojectComponent
   ],
   imports: [
     BrowserModule,
@@ -52,11 +56,11 @@ import {CustomersService} from './services/customers.service';
   ],
   providers: [
     EmployeesService,
-    CustomersService
+    CustomersService,
+    ProjectsService
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  // baseUrl = environment.apiUrl;
-    // animal: string = environment.APIEndpoint;
+
  }
