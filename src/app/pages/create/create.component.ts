@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {UsersService} from '../../services/users.service';
+import {EmployeesService} from '../../services/employees.service';
 import {Router} from '@angular/router';
 
 @Component({
@@ -23,7 +23,7 @@ export class CreateComponent implements OnInit {
     post:""
     }
 
-    constructor(private usersService:UsersService,private route:Router) {
+    constructor(private employeesService:EmployeesService,private route:Router) {
 
     }
 
@@ -33,7 +33,7 @@ export class CreateComponent implements OnInit {
     // fonction appelée au clique du bouton ajouter - voir html fonction (click)
     createEmployee(){
     // on consomme notre service qui a comme arguments les valuers du formulaire
-    this.usersService
+    this.employeesService
     .createEmployee(this.formCreate.name,
       this.formCreate.firstname,
       this.formCreate.username,

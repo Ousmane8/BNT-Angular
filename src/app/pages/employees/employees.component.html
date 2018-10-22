@@ -12,16 +12,16 @@
 
     <tr>
         <td>id</td>
-        <td>name</td>
-        <td>firstname</td>
-        <td>username</td>
-        <td>birthday</td>
-        <td>address</td>
-        <td>city</td>
-        <td>zipcode</td>
-        <td>phone</td>
-        <td>email</td>
-        <td>post</td>
+        <td>Nom</td>
+        <td>Prenom</td>
+        <td>Username</td>
+        <td>Date de naissance</td>
+        <td>Rue</td>
+        <td>Ville</td>
+        <td>Code Postal</td>
+        <td>Telephone</td>
+        <td>Email</td>
+        <td>Poste</td>
     </tr>
     
     <tbody>
@@ -38,9 +38,9 @@
             <td>{{employee.email}}</td>
             <td>{{employee.post}}</td>
             <td>
-                <a routerLink="/user/{{user._id}}" class="btn btn-primary">voir profil </a>
-                <a routerLink="/update/{{user._id}}" class="btn btn-secondary">modifier profil</a>
-                <button type="button" name="button" class="btn btn-danger" (click)="deleteEmployee(user._id)">Supprimer</button>
+                <a routerLink="/employee/{{employee._id}}" class="btn btn-primary">voir profil </a>
+                <a routerLink="/update/{{employee._id}}" class="btn btn-secondary">modifier profil</a>
+                <button type="button" name="button" class="btn btn-danger" (click)="deleteEmployee(employee._id)">Supprimer</button>
             </td>
         </tr>
     </tbody>

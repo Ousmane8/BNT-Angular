@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {UsersService} from '../../services/users.service';
+import {EmployeesService} from '../../services/employees.service';
 
 @Component({
   selector: 'app-employees',
@@ -10,19 +10,21 @@ export class EmployeesComponent implements OnInit {
 
   employees;
 
-  constructor(private usersService:UsersService) { 
-    this.usersService.getEmployees().subscribe(employees=>{
+  constructor(private employeesService:EmployeesService) { 
+    this.employeesService.getEmployees().subscribe(employees=>{
       this.employees=employees;
       console.log(employees);
   })
+  
   }
 
   
 
   ngOnInit() {
+
   }
   deleteEmployee(id){
-    this.usersService
+    this.employeesService
     .delete(id).subscribe(resp=>{
         console.log(resp);
     });

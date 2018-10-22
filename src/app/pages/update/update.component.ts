@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from '../../services/users.service';
+import { EmployeesService } from '../../services/employees.service';
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
@@ -9,8 +9,8 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class UpdateComponent implements OnInit {
 
-  user;
-  userId;
+  employee;
+  employeeId;
 
     formUpdate={
       name:"",
@@ -25,15 +25,15 @@ export class UpdateComponent implements OnInit {
       post:""
     }
 
-  constructor(private usersService:UsersService,private route:ActivatedRoute) {
+  constructor(private employeesService:EmployeesService,private route:ActivatedRoute) {
       this.route.params.subscribe((params) => {
-          this.userId=params['id'];
+          this.employeeId=params['id'];
       })
 
-      this.usersService.getUser(this.userId).subscribe(user=>{
+      this.employeesService.getEmployee(this.employeeId).subscribe(employee=>{
 
-          this.user=user;
-          console.log(this.user);
+          this.employee=employee;
+          console.log(this.employee);
 
       });
   }
@@ -41,7 +41,7 @@ export class UpdateComponent implements OnInit {
   ngOnInit() {
   }
   updateEmployee(id){
-      this.usersService
+      this.employeesService
       .updatedEmployee(this.formUpdate.name,
         this.formUpdate.firstname,
         this.formUpdate.username,
@@ -52,7 +52,7 @@ export class UpdateComponent implements OnInit {
         this.formUpdate.phone,
         this.formUpdate.email,
         this.formUpdate.post,
-        this.userId)      
+        this.employeeId)      
   }
 
 }
