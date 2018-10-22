@@ -17,10 +17,13 @@ import { EmployeesComponent } from './pages/employees/employees.component';
 import { CustomerComponent } from './pages/customer/customer.component';
 import { CustomersComponent } from './pages/customers/customers.component';
 import { HomeComponent } from './pages/home/home.component';
+import { UpdateComponent } from './pages/update/update.component';
+import { CreatecustomerComponent } from './pages/createcustomer/createcustomer.component';
+import { UpdatecustomerComponent } from './pages/updatecustomer/updatecustomer.component';
 
 // services
 import {EmployeesService} from './services/employees.service';
-import { UpdateComponent } from './pages/update/update.component';
+import {CustomersService} from './services/customers.service';
 
 
 @NgModule({
@@ -36,7 +39,11 @@ import { UpdateComponent } from './pages/update/update.component';
     HomeComponent,
     EmployeeComponent,
     CustomerComponent,
-    ProjectComponent
+    ProjectComponent,
+    CreatecustomerComponent,
+    UpdatecustomerComponent,
+    UpdatecustomerComponent,
+    CreatecustomerComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +51,8 @@ import { UpdateComponent } from './pages/update/update.component';
     HttpClientModule
   ],
   providers: [
-    EmployeesService
+    EmployeesService,
+    CustomersService
   ],
   bootstrap: [AppComponent]
 })
