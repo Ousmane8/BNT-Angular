@@ -1,4 +1,4 @@
-<h1>Liste des Projets</h1>
+<h1>Liste des   projets</h1>
 
 <div class="counter" *ngIf="projects">
     <p>{{projects.length}} projets</p>
@@ -7,8 +7,8 @@
 <div class="mt-5 mb-5">
     <a routerLink='/createproject' class="btn btn-info">ajouter un projet</a>
 </div>
-
-<table class="table">
+<div class="table-responsive">
+<table class="table table-hover table-bordered table-dark">
 
     <tr>
         <td>id</td>
@@ -40,3 +40,4 @@
     </tbody>
 
 </table>
+</div>

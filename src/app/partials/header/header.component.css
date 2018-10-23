@@ -17,3 +17,7 @@ header ul li a{
     font-size: 12px;
     letter-spacing: 2px;
 }
+.logo-header img{
+height: 15vh;
+width: 10%;
+}
