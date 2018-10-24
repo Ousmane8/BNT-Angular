@@ -3,6 +3,65 @@
     Bonne navigation.
 </p>
 
+<div class="counter" *ngIf="projects">
+        <p>{{projects.length}} projets</p>
+</div>
+
+
+<div class="statContainer">
+    
+    <a class="nounderline" href="#" title="Web Development Services">
+    <div class="statBubbleContainer">
+    <div class="statBubble websitesLaunched">
+      <div class="statNum">
+      2
+      </div>
+    </div>
+      <h3> Projets </h3>
+      <!-- <div class="statRedirect"><span data-title="portfolio &rarr;">portfolio &rarr;</span> </div> -->
+    </div>
+    </a>
+    
+    
+    <a class="nounderline" href="#" title="Meet our developers">
+    <div class="statBubbleContainer">
+    <div class="statBubble teamSize">
+            <div class="statNum">
+                    2
+            </div>
+    </div>
+      <h3>salariés</h3>
+      <!-- <div class="statRedirect"><span data-title="meet us &rarr;">meet us &rarr;</span> </div> -->
+    </div>
+    </a>
+      
+    <a class="nounderline" href="#" title="Meet our developers">
+        <div class="statBubbleContainer">
+        <div class="statBubble teamSize">
+             <div class="statNum">
+                        3
+            </div>
+        </div>
+          <h3>Clients</h3>
+          <!-- <div class="statRedirect"><span data-title="meet us &rarr;">meet us &rarr;</span> </div> -->
+        </div>
+        </a>
+
+      <a class="nounderline" href="#" title="Learn about our services">
+    <div class="statBubbleContainer">
+    <div class="statBubble topSEORank">
+      <div class="statNum">
+    50€
+      </div>
+    </div>
+      <h3> Chiffres d'affaires</h3>
+      <!-- <div class=""><span>test</span> </div> -->
+    </div>
+    </a>
+      
+     
+    
+    </div>
 <div class="row">
 <div class="col">
     <a routerLink="/projects" class="btn btn-primary">
@@ -11,7 +70,7 @@
 </div>
 <div class="col">
     <a routerLink="/employees" class="btn btn-primary">
-        liste des utilisateurs
+        liste des salariés
     </a>
 </div>
 <div class="col">
@@ -20,6 +79,3 @@
     </a>
 </div>
 </div>
-
-
-
